@@ -7,7 +7,9 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -15,9 +17,10 @@ import java.util.List;
  */
 public class Warehouse {
     public static final int MIN_THRESHOLD_TRIGGER = 20;
+    public static final int DEFAULT_SHIP_QUANTITY = 10;
     private String name;
     private String zip;
-    private List<ManufactureItem> inventory;
+    private Map<String, Integer> inventory;
     
     private static Warehouse instance;
     protected Warehouse() {}
@@ -26,10 +29,17 @@ public class Warehouse {
         if(instance == null)
         {
             Warehouse ins = new Warehouse();
-            ins.name = "Los Angeles Warehouse";
-            ins.zip = "90001";
-            ins.inventory= new ArrayList<ManufactureItem>();
-            instance = ins;
+			ins.name = "Losangeles Warehouse";
+			ins.zip = "90001";
+			ins.inventory = new HashMap<String, Integer>();
+			ins.inventory.put("miphone", 0);
+			ins.inventory.put("mipod", 0);
+			ins.inventory.put("mibook", 0);
+			ins.inventory.put("mibookpro", 0);
+			ins.inventory.put("mibookair", 0);
+			ins.inventory.put("mipad", 0);
+
+			instance = ins;
         }
         return instance;
     }
@@ -50,11 +60,11 @@ public class Warehouse {
         this.zip = zip;
     }
 
-    public List<ManufactureItem> getInventory() {
+    public Map<String,Integer> getInventory() {
         return inventory;
     }
 
-    public void setInventory(List<ManufactureItem> inventory) {
+    public void setInventory(Map<String,Integer> inventory) {
         this.inventory = inventory;
     }
     

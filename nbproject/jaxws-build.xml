@@ -32,4 +32,112 @@
                 JAX-WS WSIMPORT SECTION
                 ===================
             -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-ManufactureWS_MiBookAir" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookAir"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookAir" destdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookAir" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiBookAir/wsdl/54.186.176.247_8080/ManufactureWS/ManufactureWS_MiBookAir.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://54.186.176.247:8080/ManufactureWS/ManufactureWS_MiBookAir?wsdl" xnocompile="true" xendorsed="true" package="manufacture.mibookair">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiBookAir/wsdl/54.186.176.247_8080/ManufactureWS/ManufactureWS_MiBookAir.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookAir"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookAir">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ManufactureWS_MiBookAir" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/manufacture/mibookair"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookAir"/>
+    </target>
+    <target name="wsimport-client-ManufactureWS_MiPad" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPad"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPad" destdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPad" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiPad/wsdl/54.186.176.247_8080/ManufactureWS/ManufactureWS_MiPad.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://54.186.176.247:8080/ManufactureWS/ManufactureWS_MiPad?wsdl" xnocompile="true" xendorsed="true" package="manufacture.mipad">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiPad/wsdl/54.186.176.247_8080/ManufactureWS/ManufactureWS_MiPad.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPad"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPad">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ManufactureWS_MiPad" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/manufacture/mipad"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPad"/>
+    </target>
+    <target name="wsimport-client-ManufactureWS_MiPod" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPod"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPod" destdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPod" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiPod/wsdl/54.186.105.181_8080/ManufactureWS/ManufactureWS_MiPod.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://54.186.105.181:8080/ManufactureWS/ManufactureWS_MiPod?wsdl" xnocompile="true" xendorsed="true" package="manufacture.mipod">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiPod/wsdl/54.186.105.181_8080/ManufactureWS/ManufactureWS_MiPod.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPod"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPod">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ManufactureWS_MiPod" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/manufacture/mipod"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPod"/>
+    </target>
+    <target name="wsimport-client-ManufactureWS_MiPhone" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPhone"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPhone" destdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPhone" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiPhone/wsdl/54.186.105.181_8080/ManufactureWS/ManufactureWS_MiPhone.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://54.186.105.181:8080/ManufactureWS/ManufactureWS_MiPhone?wsdl" xnocompile="true" xendorsed="true" package="manufacture.miphone">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiPhone/wsdl/54.186.105.181_8080/ManufactureWS/ManufactureWS_MiPhone.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPhone"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPhone">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ManufactureWS_MiPhone" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/manufacture/miphone"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiPhone"/>
+    </target>
+    <target name="wsimport-client-ManufactureWS_MiBook" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBook"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBook" destdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBook" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiBook/wsdl/54.186.198.75_8080/ManufactureWS/ManufactureWS_MiBook.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://54.186.198.75:8080/ManufactureWS/ManufactureWS_MiBook?wsdl" xnocompile="true" xendorsed="true" package="manufacture.mibook">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiBook/wsdl/54.186.198.75_8080/ManufactureWS/ManufactureWS_MiBook.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBook"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBook">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ManufactureWS_MiBook" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/manufacture/mibook"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBook"/>
+    </target>
+    <target name="wsimport-client-ManufactureWS_MiBookPro" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookPro"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookPro" destdir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookPro" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiBookPro/wsdl/54.186.189.163_8080/ManufactureWS/ManufactureWS_MiBookPro.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://54.186.189.163:8080/ManufactureWS/ManufactureWS_MiBookPro?wsdl" xnocompile="true" xendorsed="true" package="manufacture.mibookpro">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ManufactureWS_MiBookPro/wsdl/54.186.189.163_8080/ManufactureWS/ManufactureWS_MiBookPro.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookPro"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookPro">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ManufactureWS_MiBookPro" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/manufacture/mibookpro"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ManufactureWS_MiBookPro"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ManufactureWS_MiBookAir, wsimport-client-ManufactureWS_MiPad, wsimport-client-ManufactureWS_MiPod, wsimport-client-ManufactureWS_MiPhone, wsimport-client-ManufactureWS_MiBook, wsimport-client-ManufactureWS_MiBookPro"/>
 </project>

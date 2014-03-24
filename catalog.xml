@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://54.186.176.247:8080/ManufactureWS/ManufactureWS_MiBookAir?wsdl" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiBookAir/wsdl/54.186.176.247_8080/ManufactureWS/ManufactureWS_MiBookAir.wsdl"/>
+    <system systemId="http://54.186.176.247:8080/ManufactureWS/ManufactureWS_MiBookAir?xsd=1" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiBookAir/wsdl/54.186.176.247_8080/ManufactureWS/ManufactureWS_MiBookAir.xsd_1.xsd"/>
+    <system systemId="http://54.186.176.247:8080/ManufactureWS/ManufactureWS_MiPad?wsdl" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiPad/wsdl/54.186.176.247_8080/ManufactureWS/ManufactureWS_MiPad.wsdl"/>
+    <system systemId="http://54.186.176.247:8080/ManufactureWS/ManufactureWS_MiPad?xsd=1" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiPad/wsdl/54.186.176.247_8080/ManufactureWS/ManufactureWS_MiPad.xsd_1.xsd"/>
+    <system systemId="http://54.186.105.181:8080/ManufactureWS/ManufactureWS_MiPod?wsdl" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiPod/wsdl/54.186.105.181_8080/ManufactureWS/ManufactureWS_MiPod.wsdl"/>
+    <system systemId="http://54.186.105.181:8080/ManufactureWS/ManufactureWS_MiPod?xsd=1" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiPod/wsdl/54.186.105.181_8080/ManufactureWS/ManufactureWS_MiPod.xsd_1.xsd"/>
+    <system systemId="http://54.186.105.181:8080/ManufactureWS/ManufactureWS_MiPhone?wsdl" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiPhone/wsdl/54.186.105.181_8080/ManufactureWS/ManufactureWS_MiPhone.wsdl"/>
+    <system systemId="http://54.186.105.181:8080/ManufactureWS/ManufactureWS_MiPhone?xsd=1" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiPhone/wsdl/54.186.105.181_8080/ManufactureWS/ManufactureWS_MiPhone.xsd_1.xsd"/>
+    <system systemId="http://54.186.198.75:8080/ManufactureWS/ManufactureWS_MiBook?wsdl" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiBook/wsdl/54.186.198.75_8080/ManufactureWS/ManufactureWS_MiBook.wsdl"/>
+    <system systemId="http://54.186.198.75:8080/ManufactureWS/ManufactureWS_MiBook?xsd=1" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiBook/wsdl/54.186.198.75_8080/ManufactureWS/ManufactureWS_MiBook.xsd_1.xsd"/>
+    <system systemId="http://54.186.189.163:8080/ManufactureWS/ManufactureWS_MiBookPro?wsdl" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiBookPro/wsdl/54.186.189.163_8080/ManufactureWS/ManufactureWS_MiBookPro.wsdl"/>
+    <system systemId="http://54.186.189.163:8080/ManufactureWS/ManufactureWS_MiBookPro?xsd=1" uri="src/conf/xml-resources/web-service-references/ManufactureWS_MiBookPro/wsdl/54.186.189.163_8080/ManufactureWS/ManufactureWS_MiBookPro.xsd_1.xsd"/>
+</catalog>
